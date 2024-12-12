@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create Terraform Structure",
+            "type": "shell",
+            "command": "mkdir -p modules/{resource_group,network,nsg,virtual_machine,storage} && for module in resource_group network nsg virtual_machine storage; do touch modules/$module/{main.tf,variables.tf,outputs.tf}; done && touch provider.tf main.tf variables.tf outputs.tf README.md"
+        }
+    ]
+}
