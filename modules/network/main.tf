@@ -4,10 +4,8 @@ resource "azurerm_virtual_network" "this" {
   location            = var.location
   resource_group_name = var.resource_group_name
 }
-
 resource "azurerm_subnet" "this" {
-  count = length(var.subnets)
-
+  count                = length(var.subnets)
   name                 = var.subnets[count.index].name
   address_prefix       = var.subnets[count.index].address_prefix
   resource_group_name  = var.resource_group_name

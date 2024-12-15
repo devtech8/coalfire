@@ -1,4 +1,3 @@
-## main.tf
 module "resource_group" {
   source   = "./modules/resource_group"
   name     = "poc-resource-group"
